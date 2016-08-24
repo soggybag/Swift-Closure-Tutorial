@@ -44,7 +44,7 @@ Closures can be:
 
 Closures Example: 
 
-Playground: [Closures1.playground](https://github.com/soggybag/ClosuresExample1)
+Playground: [Closures1.playground](Closures1.playground.zip)
 
 Activity: Closures in the Wild. Download and open the project below. Find the closures in the sample project. 
 How many did you find?
@@ -137,7 +137,7 @@ Project files: [Closure Example 3](https://github.com/soggybag/ClosuresExample3)
 Closures can capture variables that exist outside their local scope. 
 You could say a closure __encloses__ these values. Which might explain the name?. 
 
-Example Files: Closures2.playground
+Example Files: [Closures2.playground](https://github.com/soggybag/ClosuresExample2)
 
 Quick discussion: 
 
@@ -147,7 +147,6 @@ Quick discussion:
 Exercise: Iterator! Make an iterator. This will be a function that takes an array as a parameter, and 
 returns a closure that will iterate the contents of the array. See the notes in the playground for 
 details. 
-
 
 ## Conclusion
 
