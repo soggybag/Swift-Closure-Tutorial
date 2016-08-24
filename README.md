@@ -4,10 +4,10 @@ A short introduction to closures in practical usage.
 
 # Objectives
 
-Understand what a closure is
-Identify closures used commonly in UIKit
-Write closures yourself
-Create system that makes paractical use of a closure
+- Understand what a closure is
+- Identify closures used commonly in UIKit
+- Write closures yourself
+- Create system that makes paractical use of a closure
 
 # Lesson
 
@@ -29,16 +29,19 @@ Create system that makes paractical use of a closure
 
 ## Intro
 
-Closures are self-contained blocks of functionality. Sometimes closures are called "blocks".
-If you are familiar with functions than you should understand closures with little effort.
-In Swift functions are a special case of closure. 
+Closures are self-contained blocks of functionality. Sometimes closures are called blocks, lambdas, or anonymous 
+functions in other languages.
+
+If you are familiar with functions than you should understand closures with little effort. In Swift functions 
+are a special case of closure. 
 
 In a nustshell closures are functions with the added bonus that they can be treated as a value type.
-Closures can be:
+
+Closures can:
 
 - Passed as values
 - Assigned to variables
-- Closures can capture (or __enclose__) variables from the surrounding context (more on this later)
+- Capture (or __enclose__) variables from the surrounding context
 
 **Question:**
 
