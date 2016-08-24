@@ -13,14 +13,19 @@ Create system that makes paractical use of a closure
 
 ## Outline 
 
----
-mins    activity    description
-5       Intro       What is a closure?
-5       Discussion  Spot closures in example
-10      Practice    Write some closures 
-??
-??      Discussion  Closing discussion questions
----
+|mins   |activity   |description
+|---    |---        |---
+|5      |Intro      |What is a closure?
+|5      |Questions  |
+|5      |Playground |Sample code
+|10     |Exercise   |Closures in the wild
+|5      |Discussion |
+|5      |Exercise   |Write closure types
+|5      |Exercise   |ButtonNode
+|10     |Exercsie   |Joystick
+|5      |Discussion |Capturing values
+|10     |Exercise   |Iterator
+
 
 ## Intro
 
