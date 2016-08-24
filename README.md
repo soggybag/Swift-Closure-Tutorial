@@ -137,7 +137,7 @@ Project files: [Closure Example 3](https://github.com/soggybag/ClosuresExample3)
 Closures can capture variables that exist outside their local scope. 
 You could say a closure __encloses__ these values. Which might explain the name?. 
 
-Example Files: [Closures2.playground](https://github.com/soggybag/ClosuresExample2)
+Example Files: [Closures2.playground](Closures2.playground.zip)
 
 Quick discussion: 
 
@@ -150,9 +150,13 @@ details.
 
 ## Conclusion
 
-- Name some differences between traditional functions and closures?
-- Closures in the examples were used to handle 
+Closures are really useful. They are used extensively in the UIKit framework. A function is a closure. 
+Think of closures as blocks of fucntional code that can be assigned, passed, and returned. 
 
+Exercise: 
+
+- List the features of closures? 
+- Contrast the difference between using a closure and the delegate pattern?
 
 # Vocabulary
 
@@ -166,7 +170,8 @@ var a = {(Int) -> Int in /* do stuff */}
 
 ## Higher order Functions 
 
-A higher order function is a function that takes another function as a parameter. 
+A higher order function is a function that takes another function as a parameter. That is passing a closure as a 
+parameter. 
 
 ## Callback
 
@@ -174,7 +179,7 @@ A closure passed to an object. Usually executed Asynchronously.
 
 ## Handler 
 
-A closure executed by another object, usually in response to an action, like a tap or swipe. 
+A closure executed by another object, usually in response to an action, like a tap, swipe, or other event/action. 
 
 ## Function 
 
