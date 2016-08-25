@@ -52,7 +52,7 @@ Closures can:
 
 Closures Example: 
 
-Playground: [Closures1.playground](Closures1.playground.zip)
+Playground: [Closures1.playground](Closures1.playground)
 
 Activity: Closures in the Wild. Download and open the project below. Find the closures in the sample project. 
 How many did you find?

@@ -94,6 +94,8 @@ lastOperation(2, 7)
 
 
 // Closures can be passed as parameters to other functions:
+// doMath() takes two Ints and a closure. The closure must take two Ints 
+// and return an Int
 
 func doMath(a: Int, b: Int, operation: (Int, Int) -> Int) {
     print(operation(a, b))
