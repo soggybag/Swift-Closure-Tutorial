@@ -35,24 +35,51 @@ functions in other languages.
 If you are familiar with functions than you should understand closures with little effort. In Swift functions 
 are a special case of closure. 
 
-In a nustshell closures are functions with the added bonus that they can be treated as a value type.
+In a nustshell closures are just the functions that you are already familiar with the following added features:
 
-Closures can:
-
-- Passed as values
-- Assigned to variables
-- Capture (or __enclose__) variables from the surrounding context
+- Closures can be passed as values
+- Closures can be assigned to variables
+- Closures capture (or __enclose__) variables from the surrounding context
 
 **Question:**
 
-- Thoughts on closures? 
-- Give me some use cases?
+- Who is familar with closures? 
+- Given the features above suggest some use cases for Closures? 
 
 ## What do Closures look like in Swift?
 
 Closures Example: 
 
 Playground: [Closures1.playground](Closures1.playground)
+
+### Closure Types
+
+Closures are **values** and as such they have a type. The Type of a closures is it's __signature__. The signature is 
+the parameters it accepts, and the value it returns.
+
+var a = {(Int) -> Int in /* do stuff */} // This clsoure is type: (Int) -> (Int)
+
+You could declare a var of this type: 
+
+var f: (Int) -> (Int) 
+
+## Capturing Values
+
+Closures can capture variables that exist outside their local scope. 
+You could say a closure __encloses__ these values. Which might explain the name? 
+
+Example Files: [Closures2.playground](Closures2.playground)
+
+Quick discussion: Important! closures capture the value of parameters passed to a function that creates a closure. 
+
+Exercise: Iterator! Make an iterator. This will be a function that takes an array as a parameter, and 
+returns a closure that will iterate the contents of the array. See the notes in the playground for 
+details.
+
+- Where does that value of count come from? 
+- What are the implications? 
+
+## Closures in UIKit
 
 Activity: Closures in the Wild. Download and open the project below. Find the closures in the sample project. 
 How many did you find?
@@ -80,31 +107,18 @@ Further challenges:
 
 - What do the closures do here? 
 - Does `presentViewController()` use a closure? 
+- Take a close look at: `addTextFieldWithConfigurationHandler()` what does the closure do here? 
 - Can you compare closures to the delegate pattern? 
- 
-### Closure Features
-
-- Closures can be assigned to variables 
-- Closures can be passed as parameters to methods 
-- Closures can be returned from a method 
-
-### Closure Types
-
-Closures are **values** and as such they have a type. The Type of a closures is it's signature. The signature is 
-the parameters it accepts, and the value it returns.
-
-var a = {(Int) -> Int in /* do stuff */} // This clsoure is type: (Int) -> (Int)
-
-You could declare a var of this type: 
-
-var f = (Int) -> (Int) 
 
 **Exercise:** 
 
-Write the function types for the closures in the example, do this with a partner. Write the types for: 
+Write the function types for the closures in the example, do this with a partner.
 
-- UIAlertAction( ... handler:) (the handler param)
-- presentViewController(... completion:) (The completion param)
+- `UIAlertAction( ... handler:)` (the handler param)
+- `presentViewController(... completion:)` (The completion param)
+- `addTextFieldWithConfigurationHandler()` 
+
+After you've written the type look up the documentation for each of these functions and compare. 
 
 ## Use cases closures
 
@@ -112,15 +126,21 @@ Closures are useful when you want to add functionality to something, or need the
 as convenient. 
 
 In the case of presentViewController "completion" might be referred to as a "callback" since it's execution is
-asynchronous. The animation must complete before the aniamtion is finished.
+asynchronous. The animation must complete before the aniamtion is finished. 
+
+With UIAlertAction handler is a block of code that may or may not be executed at some point in the future. We call 
+this use a handler since the closure is how we are handling user interaction with a button. 
+
+**Discussion**
 
 - Why does UIKit use closures for UIAlertAction and presentViewController()?
+- Why does `addTextFieldWithConfigurationHandler()` use a closure?
 - Why do you have to use self in closures?
 
 ## MSButtonNode
 
 The MSButtonNode class is another use case for closures. The selectedHandler is a class property the 
-value of which is a funtion that takes no parameters and returns nothing. 
+value of which is a function that takes no parameters and returns nothing. 
 
 Project file: [Closure example 2](https://github.com/soggybag/ClosuresExample2)
 
@@ -140,22 +160,6 @@ Joystick should invoke this closure passing it's xValue, and yValue. Use the clo
 
 Project files: [Closure Example 3](https://github.com/soggybag/ClosuresExample3)
 
-## Capturing Values
-
-Closures can capture variables that exist outside their local scope. 
-You could say a closure __encloses__ these values. Which might explain the name?. 
-
-Example Files: [Closures2.playground](Closures2.playground.zip)
-
-Quick discussion: 
-
-- Where does that value of count come from? 
-- What are the implications? 
-
-Exercise: Iterator! Make an iterator. This will be a function that takes an array as a parameter, and 
-returns a closure that will iterate the contents of the array. See the notes in the playground for 
-details. 
-
 ## Conclusion
 
 Closures are really useful. They are used extensively in the UIKit framework. A function is a closure. 
@@ -174,12 +178,11 @@ Here are some terms used when talking about closures
 
 A function/closure assigned to variable. This is sometimes called a "function literal"
 
-var a = {(Int) -> Int in /* do stuff */}
+`var a = {(Int) -> Int in /* do stuff */}`
 
 ## Higher order Functions 
 
-A higher order function is a function that takes another function as a parameter. That is passing a closure as a 
-parameter. 
+A higher order function is a function that takes another function as a parameter.
 
 ## Callback
 
