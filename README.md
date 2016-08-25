@@ -11,6 +11,8 @@ A short introduction to closures in practical usage.
 
 # Lesson
 
+Hands on.
+
 ## Outline 
 
 |mins   |activity   |description
@@ -33,7 +35,8 @@ Closures are self-contained blocks of functionality. Sometimes closures are call
 functions in other languages.
 
 If you are familiar with functions than you should understand closures with little effort. In Swift functions 
-are a special case of closure. 
+are a special case of closure. By learning closures you will expand your ability to use functions into new and 
+useful territory. You will also develop a stronger understanding of the built frameworks.
 
 In a nustshell closures are just the functions that you are already familiar with the following added features:
 
@@ -43,7 +46,8 @@ In a nustshell closures are just the functions that you are already familiar wit
 
 **Question:**
 
-- Who is familar with closures? 
+- Assuming everyone is familiar with functions explain a function?
+- Who is familar with closures?
 - Given the features above suggest some use cases for Closures? 
 
 ## What do Closures look like in Swift?
@@ -61,7 +65,7 @@ the parameters it accepts, and the value it returns.
 
 var a = {(Int) -> Int in /* do stuff */} // This clsoure is type: (Int) -> (Int)
 
-You could declare a var of this type: 
+You could declare a var of this type that could be assigned the closure above: 
 
 var f: (Int) -> (Int) 
 
