@@ -52,6 +52,8 @@ Closures Example:
 
 Playground: [Closures1.playground](Closures1.playground)
 
+Exercise: Math functions. Student directed. 
+
 ### Closure Types
 
 Closures are **values** and as such they have a type. The Type of a closures is it's __signature__. The signature is 
@@ -66,18 +68,18 @@ var f: (Int) -> (Int)
 ## Capturing Values
 
 Closures can capture variables that exist outside their local scope. 
-You could say a closure __encloses__ these values. Which might explain the name? 
+You could say a closure __encloses__ these values. Which might explain the name?
 
 Example Files: [Closures2.playground](Closures2.playground)
 
-Quick discussion: Important! closures capture the value of parameters passed to a function that creates a closure. 
+Important! closures capture the value of parameters passed to a function that creates a closure. 
 
 Exercise: Iterator! Make an iterator. This will be a function that takes an array as a parameter, and 
 returns a closure that will iterate the contents of the array. See the notes in the playground for 
-details.
+details. Students work in pairs to solve this problem. 
 
-- Where does that value of count come from? 
-- What are the implications? 
+Post exercise discussion: Everyone pair up and decide what is most important and what is most confusing about 
+capturing values. 
 
 ## Closures in UIKit
 
