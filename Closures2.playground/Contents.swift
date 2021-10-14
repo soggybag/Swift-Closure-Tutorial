@@ -2,21 +2,63 @@
 
 import Cocoa
 
-func makeCounter() -> () -> Int {
-    var count = 0 // This value is captured by the closure (counter())
-    
-    func counter() -> Int {
-        count += 1
-        return count
-    }
-    
-    return counter
+func makeCounter(n: Int = 1) -> () -> Int {
+  var count: Int = 0 // This value is captured by the closure (counter())
+  // ----------------------
+  func counter() -> Int {
+      count += n
+      return count
+  }
+  // ----------------------
+  return counter
 }
 
-let counter1 = makeCounter()
+let next = makeCounter(n: -1)
+let counter2 = makeCounter(n: 77)
+print( next() )
+print( next() )
+print( next() )
+print( next() )
+print( counter2() )
+print( counter2() )
+print( next() )
 
-counter1()
-counter1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+var numbers = [9,4,2,8,6,3]
+
+numbers.sort(by: { a, b in
+  return a < b
+})
+
+print(numbers)
+
+func doesStuff(arr: [Int], op: (Int) -> Int) -> [Int] {
+  var result = [Int]()
+  for i in arr {
+    result.append(op(i))
+  }
+  return result
+}
+
+var t = doesStuff(arr: numbers, op: { $0 / 2 })
+t.sort(by: { $0 < $1 })
+
+
+
+
+
 
 
 // -----------------------
@@ -81,7 +123,7 @@ func makeIterator(array: [String]) -> () -> String? {
     return iterator
 }
 
-let it = makeIterator(["A", "B", "C", "D"])
+let it = makeIterator(array: ["A", "B", "C", "D"])
 
 it()
 it()
@@ -108,6 +150,7 @@ let g1 = makeGoblin()
 
 g1(1)
 g1(2)
+g1(2)
 
 
 
@@ -120,6 +163,17 @@ g1(2)
 
 
 
+
+
+func add(number1: Int, number2: Int) -> Int {
+  return number1 + number2
+}
+
+let addSome = { (n1: Int, n2: Int) -> Int in
+  return n1 + n2
+}
+
+print(addSome(23, 43))
 
 
 

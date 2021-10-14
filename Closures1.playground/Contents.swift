@@ -11,7 +11,8 @@ func saysHello() {
     print("Hello")
 }
 
-
+// Call the function
+saysHello()
 
 
 
@@ -23,7 +24,8 @@ var message = {
     print("Whats up!")
 }
 
-
+// Call the function
+message()
 
 
 
@@ -59,7 +61,7 @@ var multiplier = { (a: Int, b: Int) -> Int in
 
 // Invoke a closure just like a function
 
-multiplier(3, 4)
+print(multiplier(3, 4))
 
 // -----------------------------
 
@@ -86,7 +88,7 @@ multiplier(3, 4)
 
 var lastOperation = multiplier
 
-lastOperation(2, 7)
+print(lastOperation(2, 7))
 
 // Try that with one of your closures
 
@@ -103,7 +105,7 @@ func doMath(a: Int, b: Int, operation: (Int, Int) -> Int) {
 
 // Apply some math
 
-doMath(33, b: 21, operation: multiplier)
+doMath(a: 33, b: 21, operation: multiplier)
 
 // Try that with your closure
 
@@ -115,9 +117,61 @@ doMath(33, b: 21, operation: multiplier)
 
 // You can also write your closure inline:
 
-doMath(11, b: 3) { (a, b) -> Int in
+doMath(a: 11, b: 3) { (a, b) -> Int in
     return a > b ? a : b
 }
+
+
+
+func getBrunch(optionClosure:() -> (), time: Int) {
+  print("Going for brunch.")
+  optionClosure()
+}
+
+getBrunch(optionClosure: { print("Anything edible") }, time: 99)
+
+
+
+
+
+
+
+func add(number1: Int, number2: Int) -> Int {
+ return number1 + number2
+}
+
+// ------------------------------------------------
+
+var calc: (Int, Int) -> Int = { (a: Int, b: Int) in
+  return a + b
+}
+
+calc = { (c: Int, d: Int) in
+  return c * d
+}
+
+func calculate(n1: Int, n2: Int, op: (Int, Int) -> Int) {
+  print( op(n1, n2) )
+}
+
+calculate(n1: 33, n2: 44, op: { (a: Int, b: Int) in return a + b })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
